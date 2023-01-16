@@ -1,0 +1,82 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    background-color: hsl(318, 10%, 56%);
+}
+#wrapper{
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+
+.container{
+    height: 100%;
+    width: 1200px;
+    margin: 0 auto; /* 0 means top bottom zero and ...auto means left right */
+    padding: 20px;  /*all four top right bottm left same*/
+}
+
+h1{
+    margin: 20px 100px;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    color: rgb(14, 10, 6);
+    text-shadow: 2px 5px 5px rgb(196, 87, 204), 2px 5px 10px rgb(22, 2, 29) ;
+}
+
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    width:32%;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.card img{
+    width: 100%;
+    height: 100%;
+    filter: grayscale(100%);
+    box-shadow: 0 0 20px #333;
+    object-fit: cover;
+}
+.card:hover{
+    transform: scale(1.03);
+    transition: 0.5;
+    filter: drop-shadow(0 0 10px #333);
+}
+.card:hover img{
+    filter: grayscale(0%);
+}
+
+.card figcaption{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 25px;
+    width: 100%;
+    height: 20%;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    opacity: 0;
+    border-radius: 0 0 10px 10px;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.5) 0%, rgba(255, 255, 255, 0) 100%);
+    transition: 0.5s;
+  }
+  
+  .card:hover figcaption {
+    opacity: 1;
+    transform: scale(1.05);
+  }  
+
+
+
+
